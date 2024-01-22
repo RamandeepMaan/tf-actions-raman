@@ -1,0 +1,15 @@
+# Pipeline Code
+name: "First Workflow"
+on:
+  workflow_dispatch:
+  jobs:
+  tfruns:
+    runs-on: ubunto-latest
+    name: "terraform run"
+    steps:
+      - name: checkout
+        uses: actions/chekout@v3
+      - name: "Hello"
+        run: |
+        echo " Hello World"
+  
