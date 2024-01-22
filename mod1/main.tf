@@ -69,7 +69,7 @@ module "ec2" {
   map_ports = local.map_ports
   vpc_id = module.mynetwork.aws_vpc_id
 }
-*/
+
 output "vpcid" {
 value = module.mynetwork.aws_vpc_id 
 }
@@ -78,3 +78,4 @@ output "subnetid" {
   value = module.mynetwork.subnet_ids  
   
 }
+*/
