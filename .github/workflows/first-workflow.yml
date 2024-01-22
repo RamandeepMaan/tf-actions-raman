@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   jobs:
   tfruns:
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     name: "terraform run"
     steps:
       - name: checkout
