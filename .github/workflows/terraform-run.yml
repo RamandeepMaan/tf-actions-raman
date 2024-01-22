@@ -1,6 +1,9 @@
 # Pipeline Code
 name: "tf workflow"
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 jobs:
   tfruns:
