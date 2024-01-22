@@ -13,6 +13,7 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with: 
           terraform_version: "1.6.6"
+          cli_config_credential_token: ${{ secrets.TF_API_TOKEN }}
       - name: "run init"
         working-directory: mod1
         run: |
