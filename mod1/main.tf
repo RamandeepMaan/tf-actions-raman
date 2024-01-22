@@ -1,4 +1,11 @@
  terraform {
+cloud {
+    organization = "Ramandomain"
+
+    workspaces {
+      name = "workflowaction"
+    }
+  }
   required_providers {
     aws = {
       source = "hashicorp/aws"
