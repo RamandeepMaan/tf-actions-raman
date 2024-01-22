@@ -1,0 +1,28 @@
+# Pipeline Code
+name: "tf workflow"
+on:
+  workflow_dispatch:
+jobs:
+  tfruns:
+    runs-on: ubuntu-latest
+    name: "terraform run"
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: "Setup Terraform CLI"
+        with: 
+          terraform_version: "1.6.6"
+      - name: "run init"
+        working-directory: mod1
+        run: |
+          terraform init
+      - name: "run plan"
+        working-directory: mod1
+        run: |
+          terraform plan
+      - name: "run apply"
+        working-directory: mod1
+        run: |
+          terraform apply --auto-approve -input=false
+          
+  
