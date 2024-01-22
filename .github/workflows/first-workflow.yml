@@ -8,7 +8,7 @@ on:
     name: "terraform run"
     steps:
       - name: checkout
-        uses: actions/chekout@v3
+        uses: actions/checkout@v3
       - name: "Hello"
         run: |
         echo " Hello World"
